@@ -42,6 +42,6 @@ output:
 }
 </style>
 <div class="image-container">
-  <img src="./profilePic.jpg" alt="Profile Picture" class="circular-image">
+  <img src="./pages/profilePic.jpg" alt="Profile Picture" class="circular-image">
 </div>
 
