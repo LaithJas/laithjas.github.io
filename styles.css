@@ -1,0 +1,9 @@
+body {
+  background-image: url('./backgroundPic.jpg');
+  background-size: cover;
+  background-color: rgba(25,25,25, 0.5);
+}
+
+.navbar {
+  background-color: rgba(25, 25, 25, 0.9);
+}

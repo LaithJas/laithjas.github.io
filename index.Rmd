@@ -1,0 +1,47 @@
+---
+title: ""
+output:
+  html_document:
+    css: "styles.css"
+---
+
+<style>
+  .welcome-text {
+    position: relative; /* Set the position to relative */
+    top: 300px; /* Adjust the distance from the top */
+    left: -75px; /* Adjust the distance from the left */
+    font-size: 50px;
+  }
+</style>
+
+<span class="welcome-text">Welcome</span>
+
+<style>
+  .body-text {
+    position: relative; /* Set the position to relative */
+    top: 300px; /* Adjust the distance from the top */
+    left: -75px; /* Adjust the distance from the left */
+    font-size: 16px;
+  }
+</style>
+
+
+<span class="body-text">My name is [Laith Abou Saleh](about.html), I'm a Software developer <br> with a strong passion for Cybersecurity and Data Science.<br> I have developed different CLI tools and scripts<br> that automate and facilitates regular school work tasks.</span>
+
+
+<style>
+.image-container {
+    position: relative;
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+  }
+.circular-image {
+  border-radius: 100%;
+  width: 500px;
+  height: 500px;
+}
+</style>
+<div class="image-container">
+  <img src="./profilePic.jpg" alt="Profile Picture" class="circular-image">
+</div>
+

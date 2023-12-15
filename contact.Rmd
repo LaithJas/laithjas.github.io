@@ -1,0 +1,24 @@
+---
+title: "Contact"
+output:
+  html_document:
+    css: "styles.css"
+---
+
+<style>
+  .body-text {
+    position: relative; /* Set the position to relative */
+    //top: 100%; /* Adjust the distance from the top */
+    left: 1%; /* Adjust the distance from the left */
+    font-size: 20px;
+  }
+</style>
+
+
+<span class="body-text">
+  [LinkedIn](https://www.linkedin.com/in/laith-abou-saleh-0577b7208/)<br>
+  [GitHub](http://github.com/LaithJas/)<br>
+  Email: laith.jas123@gmail.com<br>
+  Phone: 480-331-7552<br>
+</span>
+

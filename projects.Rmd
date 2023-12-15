@@ -1,0 +1,48 @@
+---
+title: "Projects"
+output:
+  html_document:
+    css: "styles.css"
+---
+
+<style>
+  .body-text {
+    position: relative; /* Set the position to relative */
+    //top: 100%; /* Adjust the distance from the top */
+    left: 1%; /* Adjust the distance from the left */
+    font-size: 20px;
+  }
+</style>
+
+<span class ="body-text">Showcasing some of my projects</span>
+
+<span class="body-text">
+  <ol>
+    <li>Web Application for Bias Detection [<span style="font-size: 10px;">youtube</span>](https://www.youtube.com/watch?v=lTtpATuJXgM)</li>
+      <ul> 
+        <li>Collaborated in a team of 5 members to develop a Full Stack web application to detect bias in a data set utilizing FastAPI, React, Python, and OpenAI's GPT.</li> 
+        <li>Displays visual and textual bias analysis given a categorical data set.</li>
+        <li>Led the implementation of backend data processing and bias analysis algorithms.</li>
+      </ul>
+      <br>
+    <li>Registration BOT</li>
+      <ul>
+        <li>Developed and implemented a script that allows ASU students to automatically register for classes using Python and selenium automation browser.</li>
+        <li>Increased registration speed by 35% due to faster access to HTML tags.</li>
+        <li>Acquired knowledge in selenium and HTML through self-directed learning.</li>
+      </ul>
+      <br>
+    <li>User Interface for a Restaurant</li>
+      <ul> 
+        <li>Utilized scrum/agile framework in a team of 5 members to develop an application
+that customers can use to place orders using Java, JavaFX, and Maven.</li>
+        <li>Enhanced app performance and optimized memory usage by using efficient algorithms.</li>
+      </ul>
+      <br>
+    <li>picoCTF 2023</li>
+      <ul>
+        <li>Led a team to compete in the picoCTF 2023 tournament using tools such as Wireshark, IDA Pro, pwntools, and Cyber Chief.</li>
+        <li>Team ranked 30th out of 2500 undergraduate teams.</li>
+      </ul>
+  </ol>
+</span>

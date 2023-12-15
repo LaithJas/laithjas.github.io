@@ -1,0 +1,54 @@
+---
+title: "About"
+output:
+  html_document:
+    css: "styles.css"
+---
+<style>
+  .body-text {
+    position: relative; /* Set the position to relative */
+    top: 10%; /* Adjust the distance from the top */
+    //left: 2%; /* Adjust the distance from the left */
+    font-size: 16px;
+  }
+</style>
+<style>
+  .header-text {
+    position: relative; /* Set the position to relative */
+    top: 10%; /* Adjust the distance from the top */
+    //left: 30%; /* Adjust the distance from the left */
+    font-size: 30px;
+  }
+</style>
+
+
+
+<span class="body-text">
+  I'm glad you reached here to learn more information about me.<br> 
+  I am a 2023 computer science [ASU](https://www.asu.edu/) graduate<br>
+  with a lot of enthusiasm and passion for Software Development,<br>
+  Cybersecurity, network security, and Data Science. I spend most<br>
+  of my time researching new cutting edge technologies, testing it,<br>
+  and trying to make something creative with it.<br>
+</span>
+
+<span class="header-text">Education</span>
+
+<span class ="body-text">
+  <ul>
+    <li>2021 - Completed General Studies from Mesa Community College</li>
+    <li>2023 - Graduated from Arizona State University with a BS in Computer Science</li>
+  </ul>
+</span>
+
+<span class="header-text">Things I'm Interested in</span>
+
+<span class="body-text">
+  <ul>
+    <li>Researching New Technologies</li>
+    <li>CTF Competitions</li>
+    <li>Machine Learning</li>
+    <li>Rock Climbing</li>
+    <li>Hiking</li>
+  </ul>
+</span>

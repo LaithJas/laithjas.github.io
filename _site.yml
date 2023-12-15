@@ -1,0 +1,28 @@
+name: "Laith-Abou-Saleh"
+navbar:
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "About"
+      icon: fa-info
+      href: about.html
+    - text: "Resume"
+      icon: fa-file-text-o
+      href: resume.html
+    - text: "Projects"
+      icon: fa-laptop-code
+      href: projects.html
+    - text: "Contact"
+      icon: fa-phone
+      href: contact.html
+  right: 
+    - icon: fa-envelope fa-lg
+      href: contact.html
+    - icon: fa-github fa-lg
+      href: http://github.com/LaithJas/
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/laith-abou-saleh-0577b7208/
+output:
+  html_document:
+    theme: darkly
