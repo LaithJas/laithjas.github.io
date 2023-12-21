@@ -7,42 +7,117 @@ output:
 
 <style>
   .body-text {
-    position: relative; /* Set the position to relative */
-    //top: 100%; /* Adjust the distance from the top */
-    left: 1%; /* Adjust the distance from the left */
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 20px; /* Add margin between project sections */
+  }
+
+  .project-code {
+    font-family: 'Courier New', monospace; /* Set a monospace font for code */
+    font-size: 16px; /* Adjust code font size */
+    font-weight: bold;
+    background-color: #2b2b29 ; /* Add a light background color to code blocks */
+    padding: 10px; /* Add padding for code blocks */
+    border-radius: 5px; /* Add rounded corners to code blocks */
+    overflow-x: auto; /* Enable horizontal scroll for long lines of code */
+    margin-bottom: 20px; /* Add margin to separate code blocks */
   }
 </style>
 
-<span class ="body-text">Showcasing some of my projects</span>
+<p class="body-text">Showcasing some of my projects</p>
 
-<span class="body-text">
-  <ol>
-    <li>Web Application for Bias Detection [<span style="font-size: 10px;">youtube</span>](https://www.youtube.com/watch?v=lTtpATuJXgM)</li>
-      <ul> 
-        <li>Collaborated in a team of 5 members to develop a Full Stack web application to detect bias in a data set utilizing FastAPI, React, Python, and OpenAI's GPT.</li> 
-        <li>Displays visual and textual bias analysis given a categorical data set.</li>
-        <li>Led the implementation of backend data processing and bias analysis algorithms.</li>
-      </ul>
-      <br>
-    <li>Registration BOT</li>
-      <ul>
-        <li>Developed and implemented a script that allows ASU students to automatically register for classes using Python and selenium automation browser.</li>
-        <li>Increased registration speed by 35% due to faster access to HTML tags.</li>
-        <li>Acquired knowledge in selenium and HTML through self-directed learning.</li>
-      </ul>
-      <br>
-    <li>User Interface for a Restaurant</li>
-      <ul> 
-        <li>Utilized scrum/agile framework in a team of 5 members to develop an application
-that customers can use to place orders using Java, JavaFX, and Maven.</li>
-        <li>Enhanced app performance and optimized memory usage by using efficient algorithms.</li>
-      </ul>
-      <br>
-    <li>picoCTF 2023</li>
-      <ul>
-        <li>Led a team to compete in the picoCTF 2023 tournament using tools such as Wireshark, IDA Pro, pwntools, and Cyber Chief.</li>
-        <li>Team ranked 30th out of 2500 undergraduate teams.</li>
-      </ul>
-  </ol>
-</span>
+<ol class="body-text">
+  <li>
+    <strong>Web Application for Bias Detection</strong>
+    <ul>
+      <li>Collaborated in a team of 5 members to develop a Full Stack web application to detect bias in a data set utilizing FastAPI, React, Python, and OpenAI's GPT.</li>
+      <li>Displays visual and textual bias analysis given a categorical data set.</li>
+      <li>Led the implementation of backend data processing and bias analysis algorithms.</li>
+      <!-- Other project details -->
+    </ul>
+    
+  </li>
+  
+  
+  <li> 
+    <strong>Registration BOT</strong>
+    <ul>
+      <li>Developed and implemented a script that allows ASU students to automatically register for classes using Python and selenium automation browser.</li>
+      <li>ncreased registration speed by 35% due to faster access to HTML tags.</li>
+      <li>Acquired knowledge in selenium and HTML through self-directed learning.</li>
+      <li>A small snippet of the used code: </li>
+    </ul>
+    
+    <div class="project-code">
+    while not class_search:
+
+        # Enroll in classes that are provided by CSV file
+        if classes_search_source == 1:
+            # Accessing the class registration page
+            wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="classes-link-4"]')))
+
+            browser.get('https://webapp4.asu.edu/myasu/?action=addclass&strm')
+            # confirm that classes are in the correct term (i.e. Fall2022, Spring2023)
+            cart_term_confirm(wait)
+
+            
+            counter = 0
+            while True:
+                # wait until the classes are available and store them in a list
+                wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="win1divSSR_REGFORM_VW$grid$0"]/table/tbody')))
+                classes_list = browser.find_element(By.XPATH, '//*[@id="win1divSSR_REGFORM_VW$grid$0"]/table/tbody')
+            
+                # Uncheck the classes that are not wanted using class and section numbers
+                items = classes_list.find_elements(By.TAG_NAME, 'tr')
+                for item in items:
+                    _, class_num, _ = item.find_element(By.XPATH, 'td[4]').text.split(maxsplit=2)
+                    section, _ = item.find_element(By.XPATH, 'td[3]').text.split(maxsplit=1)
+                    if (int(class_num) not in df_class_num) or (int(section) not in df_section_num):
+                        checkbox = item.find_element(By.XPATH, 'td[1]/div/div/div/input')
+                        checkbox.click()
+            
+            # confirming the enrollment in classes
+            confirm_enrollment(wait)
+            class_stat = wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="win1divDERIVED_REGFRM1_SS_MESSAGE_LONG$0"]/div')))
+            time.sleep(period_in_sec)
+
+            # keeps trying to confirm classes registration for repeat_times.
+            if 'is full' in class_stat.text and counter < repeat_times:
+                shop_cart = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="win2divSCC_LO_FL_WRK_SCC_GROUP_BOX_1$0"]')))
+                shop_cart.click()
+                counter += 1
+            else:
+                break
+
+
+  </li>
+  
+  <li> 
+    <strong>User Interface for a Restaurant</strong>
+    <ul>
+      <li>Utilized scrum/agile framework in a team of 5 members to develop an application that customers can use to place orders using Java, JavaFX, and Maven.</li>
+      <li>Enhanced app performance and optimized memory usage by using efficient algorithms.</li>
+    </ul>
+  </li>
+
+  <!-- --> 
+  <li> 
+    <strong><picoCTF 2023</strong>
+    <ul>
+      <li>Led a team to compete in the picoCTF 2023 tournament using tools such as Wireshark, IDA Pro, pwntools, and Cyber Chief.</li>
+      <li>Team ranked 30th out of 2500 undergraduate teams. </li>
+    </ul>
+  </li>
+
+   <!-- 
+  <li> 
+    <strong></strong>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div class="project-code">
+      
+  </li> -->
+  <!-- Repeat the structure for other projects -->
+</ol>

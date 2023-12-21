@@ -5,7 +5,7 @@ output:
     css: "styles.css"
 header-includes: \usepackage{pdfpages}
 ---
-<h1 style="font-size: 14px;">
+<h1 style="font-size: 18px;">
   Welcome to my resume! This is where my journey and skills come to life.
   Download link is below. 
 </h1>

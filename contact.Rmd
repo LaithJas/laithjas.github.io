@@ -10,7 +10,7 @@ output:
     position: relative; /* Set the position to relative */
     //top: 100%; /* Adjust the distance from the top */
     left: 1%; /* Adjust the distance from the left */
-    font-size: 20px;
+    font-size: 18px;
   }
 </style>
 

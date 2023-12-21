@@ -316,20 +316,27 @@ $(document).ready(function () {
 
 <style>
   .body-text {
-    position: relative; /* Set the position to relative */
-    //top: 100%; /* Adjust the distance from the top */
-    left: 1%; /* Adjust the distance from the left */
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 20px; /* Add margin between project sections */
+  }
+
+  .project-code {
+    font-family: 'Courier New', monospace; /* Set a monospace font for code */
+    font-size: 16px; /* Adjust code font size */
+    font-weight: bold;
+    background-color: #2b2b29 ; /* Add a light background color to code blocks */
+    padding: 10px; /* Add padding for code blocks */
+    border-radius: 5px; /* Add rounded corners to code blocks */
+    overflow-x: auto; /* Enable horizontal scroll for long lines of code */
+    margin-bottom: 20px; /* Add margin to separate code blocks */
   }
 </style>
-<p><span class="body-text">Showcasing some of my projects</span></p>
-<span class="body-text">
-<ol>
+<p class="body-text">
+Showcasing some of my projects
+</p>
+<ol class="body-text">
 <li>
-Web Application for Bias Detection <a
-href="https://www.youtube.com/watch?v=lTtpATuJXgM"><span
-style="font-size: 10px;">youtube</span></a>
-</li>
+<strong>Web Application for Bias Detection</strong>
 <ul>
 <li>
 Collaborated in a team of 5 members to develop a Full Stack web
@@ -343,11 +350,11 @@ Displays visual and textual bias analysis given a categorical data set.
 Led the implementation of backend data processing and bias analysis
 algorithms.
 </li>
+<!-- Other project details -->
 </ul>
-<br>
-<li>
-Registration BOT
 </li>
+<li>
+<strong>Registration BOT</strong>
 <ul>
 <li>
 Developed and implemented a script that allows ASU students to
@@ -355,16 +362,58 @@ automatically register for classes using Python and selenium automation
 browser.
 </li>
 <li>
-Increased registration speed by 35% due to faster access to HTML tags.
+ncreased registration speed by 35% due to faster access to HTML tags.
 </li>
 <li>
 Acquired knowledge in selenium and HTML through self-directed learning.
 </li>
-</ul>
-<br>
 <li>
-User Interface for a Restaurant
+A small snippet of the used code:
 </li>
+</ul>
+<div class="project-code">
+<pre><code>while not class_search:
+
+    # Enroll in classes that are provided by CSV file
+    if classes_search_source == 1:
+        # Accessing the class registration page
+        wait.until(EC.element_to_be_clickable((By.XPATH, &#39;//*[@id=&quot;classes-link-4&quot;]&#39;)))
+
+        browser.get(&#39;https://webapp4.asu.edu/myasu/?action=addclass&amp;strm&#39;)
+        # confirm that classes are in the correct term (i.e. Fall2022, Spring2023)
+        cart_term_confirm(wait)
+
+
+        counter = 0
+        while True:
+            # wait until the classes are available and store them in a list
+            wait.until(EC.presence_of_element_located((By.XPATH, &#39;//*[@id=&quot;win1divSSR_REGFORM_VW$grid$0&quot;]/table/tbody&#39;)))
+            classes_list = browser.find_element(By.XPATH, &#39;//*[@id=&quot;win1divSSR_REGFORM_VW$grid$0&quot;]/table/tbody&#39;)
+        
+            # Uncheck the classes that are not wanted using class and section numbers
+            items = classes_list.find_elements(By.TAG_NAME, &#39;tr&#39;)
+            for item in items:
+                _, class_num, _ = item.find_element(By.XPATH, &#39;td[4]&#39;).text.split(maxsplit=2)
+                section, _ = item.find_element(By.XPATH, &#39;td[3]&#39;).text.split(maxsplit=1)
+                if (int(class_num) not in df_class_num) or (int(section) not in df_section_num):
+                    checkbox = item.find_element(By.XPATH, &#39;td[1]/div/div/div/input&#39;)
+                    checkbox.click()
+        
+        # confirming the enrollment in classes
+        confirm_enrollment(wait)
+        class_stat = wait.until(EC.presence_of_element_located((By.XPATH, &#39;//*[@id=&quot;win1divDERIVED_REGFRM1_SS_MESSAGE_LONG$0&quot;]/div&#39;)))
+        time.sleep(period_in_sec)
+
+        # keeps trying to confirm classes registration for repeat_times.
+        if &#39;is full&#39; in class_stat.text and counter &lt; repeat_times:
+            shop_cart = wait.until(EC.element_to_be_clickable((By.XPATH, &#39;//*[@id=&quot;win2divSCC_LO_FL_WRK_SCC_GROUP_BOX_1$0&quot;]&#39;)))
+            shop_cart.click()
+            counter += 1
+        else:
+            break</code></pre>
+</li>
+<li>
+<strong>User Interface for a Restaurant</strong>
 <ul>
 <li>
 Utilized scrum/agile framework in a team of 5 members to develop an
@@ -376,10 +425,10 @@ Enhanced app performance and optimized memory usage by using efficient
 algorithms.
 </li>
 </ul>
-<br>
-<li>
-picoCTF 2023
 </li>
+<!-- -->
+<li>
+<strong>&lt;picoCTF 2023</strong>
 <ul>
 <li>
 Led a team to compete in the picoCTF 2023 tournament using tools such as
@@ -389,8 +438,19 @@ Wireshark, IDA Pro, pwntools, and Cyber Chief.
 Team ranked 30th out of 2500 undergraduate teams.
 </li>
 </ul>
+</li>
+<!-- 
+  <li> 
+    <strong></strong>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div class="project-code">
+      
+  </li> --> <!-- Repeat the structure for other projects -->
 </ol>
-<p></span></p>
 
 
 

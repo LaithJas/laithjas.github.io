@@ -6,49 +6,46 @@ output:
 ---
 <style>
   .body-text {
-    position: relative; /* Set the position to relative */
-    top: 10%; /* Adjust the distance from the top */
-    //left: 2%; /* Adjust the distance from the left */
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 1.6; /* Adjust line height for readability */
+    margin-bottom: 20px; /* Add margin between paragraphs */
   }
-</style>
-<style>
+
   .header-text {
-    position: relative; /* Set the position to relative */
-    top: 10%; /* Adjust the distance from the top */
-    //left: 30%; /* Adjust the distance from the left */
     font-size: 30px;
+    margin-top: 30px; /* Add margin to separate sections */
+    margin-bottom: 10px; /* Add margin below headers */
+  }
+
+  /* Style the list items */
+  .interests-list {
+    padding-left: 20px; /* Indent the list items */
+  }
+
+  /* Style list items within the interests list */
+  .interests-list li {
+    margin-bottom: 8px; /* Add space between list items */
+    list-style: disc; /* Show bullet points */
   }
 </style>
 
+<p class="body-text">
+  I'm glad you reached here to learn more information about me. I am a 2023 computer science <a href="https://www.asu.edu/">ASU</a> graduate with a lot of enthusiasm and passion for Software Development, Cybersecurity, network security, and Data Science. I spend most of my time researching new cutting-edge technologies, testing them, and trying to make something creative with them.
+</p>
 
+<h2 class="header-text">Education</h2>
 
-<span class="body-text">
-  I'm glad you reached here to learn more information about me.<br> 
-  I am a 2023 computer science [ASU](https://www.asu.edu/) graduate<br>
-  with a lot of enthusiasm and passion for Software Development,<br>
-  Cybersecurity, network security, and Data Science. I spend most<br>
-  of my time researching new cutting edge technologies, testing it,<br>
-  and trying to make something creative with it.<br>
-</span>
+<ul class="body-text interests-list">
+  <li>2021 - Completed General Studies from Mesa Community College</li>
+  <li>2023 - Graduated from Arizona State University with a BS in Computer Science</li>
+</ul>
 
-<span class="header-text">Education</span>
+<h2 class="header-text">Things I'm Interested in</h2>
 
-<span class ="body-text">
-  <ul>
-    <li>2021 - Completed General Studies from Mesa Community College</li>
-    <li>2023 - Graduated from Arizona State University with a BS in Computer Science</li>
-  </ul>
-</span>
-
-<span class="header-text">Things I'm Interested in</span>
-
-<span class="body-text">
-  <ul>
-    <li>Researching New Technologies</li>
-    <li>CTF Competitions</li>
-    <li>Machine Learning</li>
-    <li>Rock Climbing</li>
-    <li>Hiking</li>
-  </ul>
-</span>
+<ul class="body-text interests-list">
+  <li>Researching New Technologies</li>
+  <li>CTF Competitions</li>
+  <li>Machine Learning</li>
+  <li>Rock Climbing</li>
+  <li>Hiking</li>
+</ul>

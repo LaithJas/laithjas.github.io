@@ -7,41 +7,50 @@ output:
 
 <style>
   .welcome-text {
-    position: relative; /* Set the position to relative */
-    top: 300px; /* Adjust the distance from the top */
-    left: -75px; /* Adjust the distance from the left */
-    font-size: 50px;
+    font-size: 3.5vw; /* Adjust font size based on viewport width */
+    text-align: center; /* Center align text */
+    margin-top: 10vh; /* Adjust vertical margin based on viewport height */
+  }
+  
+  .body-text {
+    font-size: 1.5vw; /* Adjust font size based on viewport width */
+    text-align: center; /* Center align text */
+    margin: 5vh auto; /* Adjust vertical margin and horizontally center */
+  }
+
+  .image-container {
+    text-align: center; /* Center align the image */
+    margin-top: 5vh; /* Adjust vertical margin based on viewport height */
+  }
+
+  .circular-image {
+    max-width: 60%; /* Set maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+  }
+  
+  /* Media Query for smaller screens (e.g., phones) */
+  @media (max-width: 768px) {
+    .welcome-text {
+      font-size: 6vw; /* Adjust font size for smaller screens */
+    }
+    
+    .body-text {
+      font-size: 3vw; /* Adjust font size for smaller screens */
+    }
   }
 </style>
 
 <span class="welcome-text">Welcome</span>
 
-<style>
-  .body-text {
-    position: relative; /* Set the position to relative */
-    top: 300px; /* Adjust the distance from the top */
-    left: -75px; /* Adjust the distance from the left */
-    font-size: 16px;
-  }
-</style>
+<span class="body-text">
+  My name is [Laith Abou Saleh](about.html), and I'm a Software Developer
+  with a strong passion for Cybersecurity and Data Science.
+  I've developed various CLI tools and scripts that facilitate routine tasks.
+  My interest lies in automating tasks to enhance efficiency and productivity.
+  Feel free to explore my portfolio and reach out with any employment opportunities.
+</span>
 
-
-<span class="body-text">My name is [Laith Abou Saleh](about.html), and I'm a Software Developer<br> with a strong passion for Cybersecurity and Data Science.<br> I've developed various CLI tools and scripts that facilitate routine tasks.<br> My interest lies in automating tasks to enhance efficiency and poductivity<br>Feel free to explore my portfolio and reach out with any employment opportunities.<br></span>
-
-
-<style>
-.image-container {
-    position: relative;
-    top: 50%; /* Adjust as needed */
-    left: 60%; /* Adjust as needed */
-  }
-.circular-image {
-  border-radius: 100%;
-  width: 500px;
-  height: 500px;
-}
-</style>
 <div class="image-container">
   <img src="./pages/profilePic.jpg" alt="Profile Picture" class="circular-image">
 </div>
-
