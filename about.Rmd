@@ -40,6 +40,13 @@ output:
   <li>2023 - Graduated from Arizona State University with a BS in Computer Science</li>
 </ul>
 
+<h2 class="header-text">Certifications</h2>
+
+<ul class="body-text interests-list">
+  <li>AWS Certified Cloud Practitioner</li>
+  <li>PostgreSQL Certificate</li>
+</ul>
+
 <h2 class="header-text">Things I'm Interested in</h2>
 
 <ul class="body-text interests-list">
